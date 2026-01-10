@@ -3,12 +3,14 @@ export function SessionVideo(){
         <div className="ServicePage_videoWrapper__io4rb">
   <section className="Video_video__5U2L1">
     <div className="Video_videoContainer__DZ4r4">
-      <iframe
-        src="https://youtu.be/PTw1HzbAol0"
-        className="Video_videoIframe__1U8Mm"
-        allow="autoplay"
-        allowFullScreen={true}
-      ></iframe>
+      <iframe 
+      className="Video_videoIframe__1U8Mm" 
+      src="https://www.youtube.com/embed/PTw1HzbAol0?si=ZQpU-TMVQMAYzxx5" 
+      title="YouTube video player" 
+      frameBorder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerPolicy="strict-origin-when-cross-origin" 
+      allowFullScreen></iframe>
     </div>
   </section>
 </div>
