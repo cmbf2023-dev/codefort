@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef, useState, useCallback } from "react"
+import { useEffect, useRef, useState } from "react"
 import type React from "react"
 import Typed from "typed.js"
 import { Particles, initParticlesEngine } from "@tsparticles/react"
@@ -7,12 +7,12 @@ import { loadSlim } from "@tsparticles/slim"
 import type { Container, Engine } from "@tsparticles/engine"
 import Link from "next/link"
 
-export function Header({ page, image = "/coded/hero-image.webp" }: { page: string, image?: string }) {
+export function Header({ page, image = "/coded/hero-image.webp" }: { page: string; image?: string }) {
   let typedText: string[] = []
-  let blockText = "Blockchain Development";
-  let blockColor = "rgb(251, 185, 57)";
-  let blockBack  = "rgba(251, 185, 57, 0.1)";
-  
+  let blockText = "Blockchain Development"
+  let blockColor = "rgb(251, 185, 57)"
+  let blockBack = "rgba(251, 185, 57, 0.1)"
+
   switch (page) {
     case "home":
       typedText = [
@@ -29,7 +29,7 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
       break
     case "software-development":
       typedText = ["Bring your ideas into reality with cutting-edge solutions"]
-      blockText = "Custom Software Development";
+      blockText = "Custom Software Development"
       blockBack = "rgba(178, 91, 246, 0.1)"
       blockColor = "rgb(178, 91, 246)"
       break
@@ -38,31 +38,31 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
       break
     case "ai-and-ml":
       typedText = ["Supercharge your business with intelligent and data-driven solutions"]
-      blockText = "AI & Machine Learning Development";
+      blockText = "AI & Machine Learning Development"
       blockBack = "rgba(75, 94, 113, 0.2)"
       blockColor = "rgb(255, 255, 255)"
       break
     case "product-design":
       typedText = ["Wow your users with the best product experience"]
-      blockText = "User Research and Product Design";
+      blockText = "User Research and Product Design"
       blockBack = "rgba(246, 100, 91, 0.1)"
       blockColor = "rgb(246, 100, 91)"
       break
     case "outsourcing":
       typedText = ["Achieve Remarkable Success with a Strategic Partnership"]
-      blockText = "Outsourcing & Recruitment Services";
+      blockText = "Outsourcing & Recruitment Services"
       blockBack = "rgba(91, 135, 246, 0.1)"
       blockColor = "rgb(91, 135, 246)"
       break
     case "maintenance":
       typedText = ["Boost your business with seamless software performance."]
-      blockText = "Software Maintenance & Support";
+      blockText = "Software Maintenance & Support"
       blockBack = "rgba(5, 201, 72, 0.1)"
       blockColor = "rgb(5, 201, 72)"
       break
     case "startup-solutions":
       typedText = ["Build your dream with our budget-friendly solutions"]
-      blockText = "Startup & Small Business Solutions";
+      blockText = "Startup & Small Business Solutions"
       blockBack = "rgba(57, 170, 251, 0.1)"
       blockColor = "rgb(57, 170, 251)"
       break
@@ -74,6 +74,7 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
   const [showServices, setShowServices] = useState(false)
   const [isOverServices, setIsOverServices] = useState(false)
   const [isOverDropdown, setIsOverDropdown] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const servicesRef = useRef<HTMLParagraphElement>(null)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -120,9 +121,9 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
-        dropdownRef.current && 
+        dropdownRef.current &&
         !dropdownRef.current.contains(event.target as Node) &&
-        servicesRef.current && 
+        servicesRef.current &&
         !servicesRef.current.contains(event.target as Node)
       ) {
         setShowServices(false)
@@ -131,9 +132,9 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
       }
     }
 
-    document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener("mousedown", handleClickOutside)
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener("mousedown", handleClickOutside)
     }
   }, [])
 
@@ -163,6 +164,14 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
 
   const handleDropdownMouseLeave = () => {
     setIsOverDropdown(false)
+  }
+
+  const handleMenuOpen = () => {
+    setIsMobileMenuOpen(true)
+  }
+
+  const handleMenuClose = () => {
+    setIsMobileMenuOpen(false)
   }
 
   return (
@@ -283,38 +292,58 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
               src="/coded/logo-full.png"
             />
           </Link>
-          
-          <nav className="Header_links__7__VU" style={{ position: 'relative' }}>
+
+          <nav className="Header_links__7__VU" style={{ position: "relative" }}>
             {/* Services Dropdown */}
             {showServices && (
               <div
                 ref={dropdownRef}
                 className="Header_servicesNavWrapperOuter__eBYPR"
                 style={{
-                  position: 'absolute',
-                  top: '0px',
-                  left: '0',
+                  position: "absolute",
+                  top: "0px",
+                  left: "0",
                   zIndex: 1000,
-                  background: 'transparent',
-                  boxShadow: '0 10px 30px rgba(0, 0, 0, 0.15)',
-                  width:"0%",
-                  borderRadius: '12px',
-                  padding: '24px',
-                  display: 'block',
+                  background: "transparent",
+                  boxShadow: "0 10px 30px rgba(0, 0, 0, 0.15)",
+                  width: "0%",
+                  borderRadius: "12px",
+                  padding: "24px",
+                  display: "block",
                   opacity: 1,
-                  visibility: 'visible',
-                  transition: 'all 0.3s ease',
+                  visibility: "visible",
+                  transition: "all 0.3s ease",
                 }}
                 onMouseEnter={handleDropdownMouseEnter}
                 onMouseLeave={handleDropdownMouseLeave}
               >
                 <div className="Header_servicesNavWrapper__Fm7SW">
-                  <h3 className="Header_servicesNavHeader__K2Q4v" style={{ margin: '0 0 20px 0', fontSize: '18px', fontWeight: 600 }}>
-                    Services we offer<span className="Header_dot__5qYda" style={{ color: '#007bff' }}>.</span>
+                  <h3
+                    className="Header_servicesNavHeader__K2Q4v"
+                    style={{ margin: "0 0 20px 0", fontSize: "18px", fontWeight: 600 }}
+                  >
+                    Services we offer
+                    <span className="Header_dot__5qYda" style={{ color: "#007bff" }}>
+                      .
+                    </span>
                   </h3>
-                  <div className="Header_servicesNav__vVlPe" >
-                    <Link className="Header_servicesLink__fHPea" href="/software-development" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      <div className="Header_servicesLinkInner__ixia5" style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px', borderRadius: '8px', transition: 'background 0.2s' }}>
+                  <div className="Header_servicesNav__vVlPe">
+                    <Link
+                      className="Header_servicesLink__fHPea"
+                      href="/software-development"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <div
+                        className="Header_servicesLinkInner__ixia5"
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "12px",
+                          padding: "10px",
+                          borderRadius: "8px",
+                          transition: "background 0.2s",
+                        }}
+                      >
                         <img
                           alt="nav image"
                           loading="lazy"
@@ -326,7 +355,7 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
                           srcSet="/coded/service-1-icon.webp, /coded/service-1-icon.webp 2x"
                           src="/coded/service-1-icon.webp"
                         />
-                        <p className="Header_serviceLinkText__EZRlM" style={{ margin: 0, flex: 1, fontSize: '14px' }}>
+                        <p className="Header_serviceLinkText__EZRlM" style={{ margin: 0, flex: 1, fontSize: "14px" }}>
                           Custom Software Development
                         </p>
                         <img
@@ -343,9 +372,23 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
                         />
                       </div>
                     </Link>
-                    
-                    <Link className="Header_servicesLink__fHPea" href="/blockchain" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      <div className="Header_servicesLinkInner__ixia5" style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px', borderRadius: '8px', transition: 'background 0.2s' }}>
+
+                    <Link
+                      className="Header_servicesLink__fHPea"
+                      href="/blockchain"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <div
+                        className="Header_servicesLinkInner__ixia5"
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "12px",
+                          padding: "10px",
+                          borderRadius: "8px",
+                          transition: "background 0.2s",
+                        }}
+                      >
                         <img
                           alt="nav image"
                           loading="lazy"
@@ -357,7 +400,7 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
                           srcSet="/coded/service-3-icon.webp, /coded/service-3-icon.webp 2x"
                           src="/coded/service-3-icon.webp"
                         />
-                        <p className="Header_serviceLinkText__EZRlM" style={{ margin: 0, flex: 1, fontSize: '14px' }}>
+                        <p className="Header_serviceLinkText__EZRlM" style={{ margin: 0, flex: 1, fontSize: "14px" }}>
                           Blockchain Development
                         </p>
                         <img
@@ -374,9 +417,23 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
                         />
                       </div>
                     </Link>
-                    
-                    <Link className="Header_servicesLink__fHPea" href="/product-design" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      <div className="Header_servicesLinkInner__ixia5" style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px', borderRadius: '8px', transition: 'background 0.2s' }}>
+
+                    <Link
+                      className="Header_servicesLink__fHPea"
+                      href="/product-design"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <div
+                        className="Header_servicesLinkInner__ixia5"
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "12px",
+                          padding: "10px",
+                          borderRadius: "8px",
+                          transition: "background 0.2s",
+                        }}
+                      >
                         <img
                           alt="nav image"
                           loading="lazy"
@@ -388,7 +445,7 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
                           srcSet="/coded/service-2-icon.webp, /coded/service-2-icon.webp 2x"
                           src="/coded/service-2-icon.webp"
                         />
-                        <p className="Header_serviceLinkText__EZRlM" style={{ margin: 0, flex: 1, fontSize: '14px' }}>
+                        <p className="Header_serviceLinkText__EZRlM" style={{ margin: 0, flex: 1, fontSize: "14px" }}>
                           User Research &amp; Product Design
                         </p>
                         <img
@@ -405,9 +462,23 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
                         />
                       </div>
                     </Link>
-                    
-                    <Link className="Header_servicesLink__fHPea" href="/ai-and-ml" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      <div className="Header_servicesLinkInner__ixia5" style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px', borderRadius: '8px', transition: 'background 0.2s' }}>
+
+                    <Link
+                      className="Header_servicesLink__fHPea"
+                      href="/ai-and-ml"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <div
+                        className="Header_servicesLinkInner__ixia5"
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "12px",
+                          padding: "10px",
+                          borderRadius: "8px",
+                          transition: "background 0.2s",
+                        }}
+                      >
                         <img
                           alt="nav image"
                           loading="lazy"
@@ -419,7 +490,7 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
                           srcSet="/coded/service-4-icon.webp, /coded/service-4-icon.webp 2x"
                           src="/coded/service-4-icon.webp"
                         />
-                        <p className="Header_serviceLinkText__EZRlM" style={{ margin: 0, flex: 1, fontSize: '14px' }}>
+                        <p className="Header_serviceLinkText__EZRlM" style={{ margin: 0, flex: 1, fontSize: "14px" }}>
                           AI &amp; ML Development
                         </p>
                         <img
@@ -436,9 +507,23 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
                         />
                       </div>
                     </Link>
-                    
-                    <Link className="Header_servicesLink__fHPea" href="/outsourcing" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      <div className="Header_servicesLinkInner__ixia5" style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px', borderRadius: '8px', transition: 'background 0.2s' }}>
+
+                    <Link
+                      className="Header_servicesLink__fHPea"
+                      href="/outsourcing"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <div
+                        className="Header_servicesLinkInner__ixia5"
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "12px",
+                          padding: "10px",
+                          borderRadius: "8px",
+                          transition: "background 0.2s",
+                        }}
+                      >
                         <img
                           alt="nav image"
                           loading="lazy"
@@ -450,7 +535,7 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
                           srcSet="/coded/service-5-icon.webp, /coded/service-5-icon.webp 2x"
                           src="/coded/service-5-icon.webp"
                         />
-                        <p className="Header_serviceLinkText__EZRlM" style={{ margin: 0, flex: 1, fontSize: '14px' }}>
+                        <p className="Header_serviceLinkText__EZRlM" style={{ margin: 0, flex: 1, fontSize: "14px" }}>
                           Outsourcing &amp; Recruitment Services
                         </p>
                         <img
@@ -467,9 +552,23 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
                         />
                       </div>
                     </Link>
-                    
-                    <Link className="Header_servicesLink__fHPea" href="/maintenance" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      <div className="Header_servicesLinkInner__ixia5" style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px', borderRadius: '8px', transition: 'background 0.2s' }}>
+
+                    <Link
+                      className="Header_servicesLink__fHPea"
+                      href="/maintenance"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <div
+                        className="Header_servicesLinkInner__ixia5"
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "12px",
+                          padding: "10px",
+                          borderRadius: "8px",
+                          transition: "background 0.2s",
+                        }}
+                      >
                         <img
                           alt="nav image"
                           loading="lazy"
@@ -481,7 +580,7 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
                           srcSet="/coded/service-6-icon.webp, /coded/service-6-icon.webp 2x"
                           src="/coded/service-6-icon.webp"
                         />
-                        <p className="Header_serviceLinkText__EZRlM" style={{ margin: 0, flex: 1, fontSize: '14px' }}>
+                        <p className="Header_serviceLinkText__EZRlM" style={{ margin: 0, flex: 1, fontSize: "14px" }}>
                           Software Maintenance &amp; Support
                         </p>
                         <img
@@ -498,9 +597,23 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
                         />
                       </div>
                     </Link>
-                    
-                    <Link className="Header_servicesLink__fHPea" href="/startup" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      <div className="Header_servicesLinkInner__ixia5" style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px', borderRadius: '8px', transition: 'background 0.2s' }}>
+
+                    <Link
+                      className="Header_servicesLink__fHPea"
+                      href="/startup"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <div
+                        className="Header_servicesLinkInner__ixia5"
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "12px",
+                          padding: "10px",
+                          borderRadius: "8px",
+                          transition: "background 0.2s",
+                        }}
+                      >
                         <img
                           alt="nav image"
                           loading="lazy"
@@ -512,7 +625,7 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
                           srcSet="/coded/service-7-icon.webp, /coded/service-7-icon.webp 2x"
                           src="/coded/service-7-icon.webp"
                         />
-                        <p className="Header_serviceLinkText__EZRlM" style={{ margin: 0, flex: 1, fontSize: '14px' }}>
+                        <p className="Header_serviceLinkText__EZRlM" style={{ margin: 0, flex: 1, fontSize: "14px" }}>
                           Startup &amp; Small Business Solutions
                         </p>
                         <img
@@ -533,23 +646,38 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
                 </div>
               </div>
             )}
-            
-            <Link className={`Header_link__OJ7mG ${page == "home" ? "Header_linkActive__1Wk7s" :""}`} href="/">Home</Link>
-            <Link className={`Header_link__OJ7mG ${page == "about-us" ? "Header_linkActive__1Wk7s" :""}`} href="/about-us">About us</Link>
-            <Link className={`Header_link__OJ7mG ${page == "our-process" ? "Header_linkActive__1Wk7s" :""}`} href="/our-process">Our process</Link>
-            <Link className={`Header_link__OJ7mG ${page == "pay-as-you-build" ? "Header_linkActive__1Wk7s" :""}`} href="/pay-as-you-build">
+
+            <Link className={`Header_link__OJ7mG ${page == "home" ? "Header_linkActive__1Wk7s" : ""}`} href="/">
+              Home
+            </Link>
+            <Link
+              className={`Header_link__OJ7mG ${page == "about-us" ? "Header_linkActive__1Wk7s" : ""}`}
+              href="/about-us"
+            >
+              About us
+            </Link>
+            <Link
+              className={`Header_link__OJ7mG ${page == "our-process" ? "Header_linkActive__1Wk7s" : ""}`}
+              href="/our-process"
+            >
+              Our process
+            </Link>
+            <Link
+              className={`Header_link__OJ7mG ${page == "pay-as-you-build" ? "Header_linkActive__1Wk7s" : ""}`}
+              href="/pay-as-you-build"
+            >
               Pay As you build<span className="Header_newTag__5CHHH">NEW</span>
             </Link>
-            
+
             {/* Services Text */}
             <p
               ref={servicesRef}
               className="Header_link__OJ7mG Header_linkMulti__uOmVn"
               style={{
-                cursor: 'pointer',
-                position: 'relative',
+                cursor: "pointer",
+                position: "relative",
                 margin: 0,
-                padding: '0',
+                padding: "0",
               }}
               onMouseEnter={handleServicesMouseEnter}
               onMouseLeave={handleServicesMouseLeave}
@@ -557,8 +685,10 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
               Services
             </p>
           </nav>
-          
-          <Link className="Header_headerButton__YuNwT" href="#contact">Contact us</Link>
+
+          <Link className="Header_headerButton__YuNwT" href="#contact">
+            Contact us
+          </Link>
           <img
             alt="menu icon"
             loading="lazy"
@@ -567,224 +697,221 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
             decoding="async"
             data-nimg="1"
             className="Header_menuOpen__u0_H5"
-            style={{ color: "transparent" }}
+            style={{ color: "transparent", cursor: "pointer" }}
             src="/images/menu.svg"
+            onClick={handleMenuOpen}
           />
         </header>
-        
-        {/* Mobile Navigation - Keep original */}
-        <nav className="Header_mobileNav__nlBu7">
-          <div className="Header_mobileTop__Gvy_h">
-            <Link href="/">
+
+        {isMobileMenuOpen && (
+          <nav className={`Header_mobileNav__nlBu7 ${isMobileMenuOpen ? "Header_mobileNavOpen__Yp5YU" :""}`}>
+            <div className="Header_mobileTop__Gvy_h">
+              <Link href="/">
+                <img
+                  alt="logo"
+                  loading="lazy"
+                  width="142.89"
+                  height="32"
+                  decoding="async"
+                  data-nimg="1"
+                  className="Header_logo__nMWzR"
+                  style={{ color: "transparent" }}
+                  srcSet="/coded/logo-full.png, /coded/logo-full.png 2x"
+                  src="/coded/logo-full.png"
+                />
+              </Link>
               <img
-                alt="logo"
+                alt="menu icon"
                 loading="lazy"
-                width="142.89"
-                height="32"
+                width="40"
+                height="40"
                 decoding="async"
                 data-nimg="1"
-                className="Header_logo__nMWzR"
-                style={{ color: "transparent" }}
-                srcSet="/coded/logo-full.png, /coded/logo-full.png 2x"
-                src="/coded/logo-full.png"
+                style={{ color: "transparent", cursor: "pointer" }}
+                src="/images/close.svg"
+                onClick={handleMenuClose}
               />
-            </Link>
-            <img
-              alt="menu icon"
-              loading="lazy"
-              width="40"
-              height="40"
-              decoding="async"
-              data-nimg="1"
-              style={{ color: "transparent" }}
-              src="/images/close.svg"
-            />
-          </div>
-          <div className="Header_navMobileWrapper__BWmve">
-            <Link className="Header_linkMobile__sGuGe" href="/">
-              <img
-                alt="icon"
-                loading="lazy"
-                width="19"
-                height="19"
-                decoding="async"
-                data-nimg="1"
-                style={{ color: "transparent" }}
-                srcSet="/coded/right.png, /coded/right.png 2x"
-                src="/coded/right.png"
-              />
-              <p className="Header_linkMobileText__6k8yi">Home</p>
-            </Link>
-            <Link className="Header_linkMobile__sGuGe" href="/about-us">
-              <img
-                alt="icon"
-                loading="lazy"
-                width="19"
-                height="19"
-                decoding="async"
-                data-nimg="1"
-                style={{ color: "transparent" }}
-                srcSet="/coded/right.png, /coded/right.png 2x"
-                src="/coded/right.png"
-              />
-              <p className="Header_linkMobileText__6k8yi">About us</p>
-            </Link>
-            <Link className="Header_linkMobile__sGuGe" href="/our-process">
-              <img
-                alt="icon"
-                loading="lazy"
-                width="19"
-                height="19"
-                decoding="async"
-                data-nimg="1"
-                style={{ color: "transparent" }}
-                srcSet="/coded/right.png, /coded/right.png 2x"
-                src="/coded/right.png"
-              />
-              <p className="Header_linkMobileText__6k8yi">Our process</p>
-            </Link>
-            <Link className="Header_linkMobile__sGuGe" href="/pay-as-you-build">
-              <img
-                alt="icon"
-                loading="lazy"
-                width="19"
-                height="19"
-                decoding="async"
-                data-nimg="1"
-                style={{ color: "transparent" }}
-                srcSet="/coded/right.png, /coded/right.png 2x"
-                src="/coded/right.png"
-              />
-              <p className="Header_linkMobileText__6k8yi">Pay As you build</p>
-              <span className="Header_newTagMobile__nrz9E">NEW</span>
-            </Link>
-            <div>
-              <h2 className="Header_mobileServiceHeader__4Rg21">Services</h2>
-              <div className="Header_innerNavs__R3eNy">
-                <Link className="Header_linkMobile__sGuGe" href="/software-development">
-                  <img
-                    alt="icon"
-                    loading="lazy"
-                    width="19"
-                    height="19"
-                    decoding="async"
-                    data-nimg="1"
-                    style={{ color: "transparent" }}
-                    srcSet="/coded/right.png, /coded/right.png 2x"
-                    src="/coded/right.png"
-                  />
-                  <p className="Header_linkMobileText__6k8yi">
-                    Custom Software Development
-                  </p>
-                </Link>
-                <Link className="Header_linkMobile__sGuGe" href="/blockchain">
-                  <img
-                    alt="icon"
-                    loading="lazy"
-                    width="19"
-                    height="19"
-                    decoding="async"
-                    data-nimg="1"
-                    style={{ color: "transparent" }}
-                    srcSet="/coded/right.png, /coded/right.png 2x"
-                    src="/coded/right.png"
-                  />
-                  <p className="Header_linkMobileText__6k8yi">
-                    Blockchain Development
-                  </p>
-                </Link>
-                <Link className="Header_linkMobile__sGuGe" href="/product-design">
-                  <img
-                    alt="icon"
-                    loading="lazy"
-                    width="19"
-                    height="19"
-                    decoding="async"
-                    data-nimg="1"
-                    style={{ color: "transparent" }}
-                    srcSet="/coded/right.png, /coded/right.png 2x"
-                    src="/coded/right.png"
-                  />
-                  <p className="Header_linkMobileText__6k8yi">
-                    User Research &amp; Product Design
-                  </p>
-                </Link>
-                <Link className="Header_linkMobile__sGuGe" href="/ai-and-ml">
-                  <img
-                    alt="icon"
-                    loading="lazy"
-                    width="19"
-                    height="19"
-                    decoding="async"
-                    data-nimg="1"
-                    style={{ color: "transparent" }}
-                    srcSet="/coded/right.png, /coded/right.png 2x"
-                    src="/coded/right.png"
-                  />
-                  <p className="Header_linkMobileText__6k8yi">
-                    AI &amp; ML Development
-                  </p>
-                </Link>
-                <Link className="Header_linkMobile__sGuGe" href="/outsourcing">
-                  <img
-                    alt="icon"
-                    loading="lazy"
-                    width="19"
-                    height="19"
-                    decoding="async"
-                    data-nimg="1"
-                    style={{ color: "transparent" }}
-                    srcSet="/coded/right.png, /coded/right.png 2x"
-                    src="/coded/right.png"
-                  />
-                  <p className="Header_linkMobileText__6k8yi">
-                    Outsourcing &amp; Recruitment Services
-                  </p>
-                </Link>
-                <Link className="Header_linkMobile__sGuGe" href="/maintenance">
-                  <img
-                    alt="icon"
-                    loading="lazy"
-                    width="19"
-                    height="19"
-                    decoding="async"
-                    data-nimg="1"
-                    style={{ color: "transparent" }}
-                    srcSet="/coded/right.png, /coded/right.png 2x"
-                    src="/coded/right.png"
-                  />
-                  <p className="Header_linkMobileText__6k8yi">
-                    Software Maintenance &amp; Support
-                  </p>
-                </Link>
-                <Link className="Header_linkMobile__sGuGe" href="/startup">
-                  <img
-                    alt="icon"
-                    loading="lazy"
-                    width="19"
-                    height="19"
-                    decoding="async"
-                    data-nimg="1"
-                    style={{ color: "transparent" }}
-                    srcSet="/coded/right.png, /coded/right.png 2x"
-                    src="/coded/right.png"
-                  />
-                  <p className="Header_linkMobileText__6k8yi">
-                    Startup &amp; Small Business Solutions
-                  </p>
-                </Link>
+            </div>
+            <div className="Header_navMobileWrapper__BWmve">
+              <Link className="Header_linkMobile__sGuGe" href="/">
+                <img
+                  alt="icon"
+                  loading="lazy"
+                  width="19"
+                  height="19"
+                  decoding="async"
+                  data-nimg="1"
+                  style={{ color: "transparent" }}
+                  srcSet="/coded/right.png, /coded/right.png 2x"
+                  src="/coded/right.png"
+                />
+                <p className="Header_linkMobileText__6k8yi">Home</p>
+              </Link>
+              <Link className="Header_linkMobile__sGuGe" href="/about-us">
+                <img
+                  alt="icon"
+                  loading="lazy"
+                  width="19"
+                  height="19"
+                  decoding="async"
+                  data-nimg="1"
+                  style={{ color: "transparent" }}
+                  srcSet="/coded/right.png, /coded/right.png 2x"
+                  src="/coded/right.png"
+                />
+                <p className="Header_linkMobileText__6k8yi">About us</p>
+              </Link>
+              <Link className="Header_linkMobile__sGuGe" href="/our-process">
+                <img
+                  alt="icon"
+                  loading="lazy"
+                  width="19"
+                  height="19"
+                  decoding="async"
+                  data-nimg="1"
+                  style={{ color: "transparent" }}
+                  srcSet="/coded/right.png, /coded/right.png 2x"
+                  src="/coded/right.png"
+                />
+                <p className="Header_linkMobileText__6k8yi">Our process</p>
+              </Link>
+              <Link className="Header_linkMobile__sGuGe" href="/pay-as-you-build">
+                <img
+                  alt="icon"
+                  loading="lazy"
+                  width="19"
+                  height="19"
+                  decoding="async"
+                  data-nimg="1"
+                  style={{ color: "transparent" }}
+                  srcSet="/coded/right.png, /coded/right.png 2x"
+                  src="/coded/right.png"
+                />
+                <p className="Header_linkMobileText__6k8yi">Pay As you build</p>
+                <span className="Header_newTagMobile__nrz9E">NEW</span>
+              </Link>
+              <div>
+                <h2 className="Header_mobileServiceHeader__4Rg21">Services</h2>
+                <div className="Header_innerNavs__R3eNy">
+                  <Link className="Header_linkMobile__sGuGe" href="/software-development">
+                    <img
+                      alt="icon"
+                      loading="lazy"
+                      width="19"
+                      height="19"
+                      decoding="async"
+                      data-nimg="1"
+                      style={{ color: "transparent" }}
+                      srcSet="/coded/right.png, /coded/right.png 2x"
+                      src="/coded/right.png"
+                    />
+                    <p className="Header_linkMobileText__6k8yi">Custom Software Development</p>
+                  </Link>
+                  <Link className="Header_linkMobile__sGuGe" href="/blockchain">
+                    <img
+                      alt="icon"
+                      loading="lazy"
+                      width="19"
+                      height="19"
+                      decoding="async"
+                      data-nimg="1"
+                      style={{ color: "transparent" }}
+                      srcSet="/coded/right.png, /coded/right.png 2x"
+                      src="/coded/right.png"
+                    />
+                    <p className="Header_linkMobileText__6k8yi">Blockchain Development</p>
+                  </Link>
+                  <Link className="Header_linkMobile__sGuGe" href="/product-design">
+                    <img
+                      alt="icon"
+                      loading="lazy"
+                      width="19"
+                      height="19"
+                      decoding="async"
+                      data-nimg="1"
+                      style={{ color: "transparent" }}
+                      srcSet="/coded/right.png, /coded/right.png 2x"
+                      src="/coded/right.png"
+                    />
+                    <p className="Header_linkMobileText__6k8yi">User Research &amp; Product Design</p>
+                  </Link>
+                  <Link className="Header_linkMobile__sGuGe" href="/ai-and-ml">
+                    <img
+                      alt="icon"
+                      loading="lazy"
+                      width="19"
+                      height="19"
+                      decoding="async"
+                      data-nimg="1"
+                      style={{ color: "transparent" }}
+                      srcSet="/coded/right.png, /coded/right.png 2x"
+                      src="/coded/right.png"
+                    />
+                    <p className="Header_linkMobileText__6k8yi">AI &amp; ML Development</p>
+                  </Link>
+                  <Link className="Header_linkMobile__sGuGe" href="/outsourcing">
+                    <img
+                      alt="icon"
+                      loading="lazy"
+                      width="19"
+                      height="19"
+                      decoding="async"
+                      data-nimg="1"
+                      style={{ color: "transparent" }}
+                      srcSet="/coded/right.png, /coded/right.png 2x"
+                      src="/coded/right.png"
+                    />
+                    <p className="Header_linkMobileText__6k8yi">Outsourcing &amp; Recruitment Services</p>
+                  </Link>
+                  <Link className="Header_linkMobile__sGuGe" href="/maintenance">
+                    <img
+                      alt="icon"
+                      loading="lazy"
+                      width="19"
+                      height="19"
+                      decoding="async"
+                      data-nimg="1"
+                      style={{ color: "transparent" }}
+                      srcSet="/coded/right.png, /coded/right.png 2x"
+                      src="/coded/right.png"
+                    />
+                    <p className="Header_linkMobileText__6k8yi">Software Maintenance &amp; Support</p>
+                  </Link>
+                  <Link className="Header_linkMobile__sGuGe" href="/startup">
+                    <img
+                      alt="icon"
+                      loading="lazy"
+                      width="19"
+                      height="19"
+                      decoding="async"
+                      data-nimg="1"
+                      style={{ color: "transparent" }}
+                      srcSet="/coded/right.png, /coded/right.png 2x"
+                      src="/coded/right.png"
+                    />
+                    <p className="Header_linkMobileText__6k8yi">Startup &amp; Small Business Solutions</p>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <Link className="Header_headerButtonMobile__EXRpk" href="#contact">Contact us</Link>
-        </nav>
+            <Link className="Header_headerButtonMobile__EXRpk" href="#contact">
+              Contact us
+            </Link>
+          </nav>
+        )}
       </div>
-      
+
       <section className="Hero_heroWrapper__HHgQu">
         <div className="Hero_heroContent__Ck9wY">
-        {!["home", "about-us", "our-process"].includes(page) && (
-          <div style={{ position: "relative", width: "fit-content", overflow: "hidden" }}><div style={{ height: "100%", opacity: 1, transform: "none" }}><p className="Hero_serviceType__nwU7a" style={{background: blockBack, color: blockColor}}>{blockText}</p></div></div>
-        )}
+          {!["home", "about-us", "our-process"].includes(page) && (
+            <div style={{ position: "relative", width: "fit-content", overflow: "hidden" }}>
+              <div style={{ height: "100%", opacity: 1, transform: "none" }}>
+                <p className="Hero_serviceType__nwU7a" style={{ background: blockBack, color: blockColor }}>
+                  {blockText}
+                </p>
+              </div>
+            </div>
+          )}
 
           <div style={{ position: "relative", width: "fit-content", overflow: "hidden" }}>
             <div style={{ height: "100%", opacity: 1, transform: "none" }}>
@@ -818,23 +945,26 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
             <div style={{ position: "relative", width: "fit-content", overflow: "hidden" }}>
               <div style={{ height: "100%", opacity: 1, transform: "none" }}>
                 <p className="Hero_heroBody__D7tPo">
-                  We harness the boundless power of technology and innovation and elevate your business performance. Your Vision brought to life by Our Expertise.
+                  We harness the boundless power of technology and innovation and elevate your business performance.
+                  Your Vision brought to life by Our Expertise.
                 </p>
               </div>
             </div>
           )}
-          {page != "about-us" && (<div style={{ position: "relative", width: "fit-content", overflow: "hidden" }}>
-            <div style={{ height: "100%", opacity: 1, transform: "none" }}>
-              <a
-                className="Hero_heroButton__BDVHi"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://cal.com/codeforttech/30min"
-              >
-                Book a call with us
-              </a>
+          {page != "about-us" && (
+            <div style={{ position: "relative", width: "fit-content", overflow: "hidden" }}>
+              <div style={{ height: "100%", opacity: 1, transform: "none" }}>
+                <a
+                  className="Hero_heroButton__BDVHi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://cal.com/codeforttech/30min"
+                >
+                  Book a call with us
+                </a>
+              </div>
             </div>
-          </div>)}
+          )}
         </div>
       </section>
       <div className="Hero_heroImageWrapper__LhUtw">
@@ -855,7 +985,7 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
             color: "transparent",
           }}
           sizes="100vw"
-          src={image}
+          src={image || "/placeholder.svg"}
         />
       </div>
     </div>

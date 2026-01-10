@@ -74,8 +74,8 @@ export function Footer() {
                                 className="Footer_footerLogoMobile__JQMV0"
                                 style={{ color: "transparent" }}
                                 srcSet="
-                                    /coded/image?url=%2Fimages%2Flogo.png&amp;w=48&amp;q=75 1x,
-                                    /coded/image?url=%2Fimages%2Flogo.png&amp;w=96&amp;q=75 2x
+                                    /coded/logo.png 1x,
+                                    /coded/logo.png 2x
                                 "
                                 src="/coded/logo.png"
                             />
