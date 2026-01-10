@@ -191,7 +191,7 @@ export function Footer() {
                         </div>
                     </div>
                     <div className="Footer_socialIconsMobile__8Wjb4">
-                        <div className="footer-container">
+                        <div className="footer-container social-icon">
                             <div className="footer-animated-content">
                                 <Link href="https://twitter.com/codeforttech/" target="_blank">
                                     <img
@@ -209,7 +209,7 @@ export function Footer() {
                             </div>
                         </div>
                         <Link href="https://linkedin.com/in/codeforttech-limited-340848259" target="_blank">
-                            <div className="footer-container">
+                            <div className="footer-container social-icon">
                                 <div className="footer-animated-content">
                                     <img
                                         alt="social icon"
@@ -227,7 +227,7 @@ export function Footer() {
                         </Link>
                     </div>
                     <div className="Footer_socialIcons__fF_Oa">
-                        <div className="footer-container">
+                        <div className="footer-container social-icon">
                             <div className="footer-animated-content">
                                 <Link href="https://twitter.com/codeforttech/" target="_blank">
                                     <img
@@ -245,7 +245,7 @@ export function Footer() {
                             </div>
                         </div>
                         <Link href="https://linkedin.com/in/codeforttech-limited-340848259" target="_blank">
-                            <div className="footer-container">
+                            <div className="footer-container social-icon">
                                 <div className="footer-animated-content">
                                     <img
                                         alt="social icon"
@@ -387,7 +387,7 @@ export function Footer() {
                 /* Mobile responsive */
                 @media (max-width: 768px) {
                     .footer-container {
-                        width: 100% !important;
+                        width: fit-content !important;
                     }
                     
                     .footer-animated-content {

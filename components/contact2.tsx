@@ -339,11 +339,11 @@ export function Contact() {
             </div>
           </div>
           
-          {/* Fourth animated section - "Email us: hello@codeforttech.com.ng" */}
+          {/* Fourth animated section - "Email us: hello@codeforttech.com" */}
           <div ref={sectionRef4} style={{position: "relative", width: "fit-content", overflow: "hidden", marginTop: "8px"}}>
             <div style={{height: "100%", opacity: 1, transform: "none", position: "relative"}}>
               <p className="Contaxct_contactTopTextsEmail__wxduZ">
-                Email us: hello@codeforttech.com.ng
+                Email us: hello@codeforttech.com
               </p>
               {/* OVERLAY DIV - This will cover the text */}
               <div
