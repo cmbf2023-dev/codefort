@@ -698,4 +698,17 @@
 .social-icon {
   width:fit-content !important;
 }
+
+.tsparticles-container {
+  background: black;
+}
+
+@media screen and (max-width: 760px){
+  .Video_video__5U2L1 {
+    width:100vw;
+    border:none;
+    top:-30px;
+    left:0;
+  }
+}
     

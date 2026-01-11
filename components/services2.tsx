@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from 'react';
+import Link from "next/link"
 
 export function Services() {
   const serviceRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -141,7 +142,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <a className="Service_button__o8Hle" href="/software-development">
+              <Link className="Service_button__o8Hle" href="/software-development">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -154,7 +155,7 @@ export function Services() {
                   srcSet="/coded/learn-more.png, /coded/learn-more.png 2x"
                   src="/coded/learn-more.png"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -214,7 +215,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <a className="Service_button__o8Hle" href="/blockchain">
+              <Link className="Service_button__o8Hle" href="/blockchain">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -227,7 +228,7 @@ export function Services() {
                   srcSet="/coded/learn-more.png, /coded/learn-more.png 2x"
                   src="/coded/learn-more.png"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -289,7 +290,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <a className="Service_button__o8Hle" href="/product-design">
+              <Link className="Service_button__o8Hle" href="/product-design">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -302,7 +303,7 @@ export function Services() {
                   srcSet="/coded/learn-more.png, /coded/learn-more.png 2x"
                   src="/coded/learn-more.png"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -364,7 +365,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <a className="Service_button__o8Hle" href="/ai-and-ml">
+              <Link className="Service_button__o8Hle" href="/ai-and-ml">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -377,7 +378,7 @@ export function Services() {
                   srcSet="/coded/learn-more.png, /coded/learn-more.png 2x"
                   src="/coded/learn-more.png"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -439,7 +440,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <a className="Service_button__o8Hle" href="/outsourcing">
+              <Link className="Service_button__o8Hle" href="/outsourcing">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -452,7 +453,7 @@ export function Services() {
                   srcSet="/coded/learn-more.png, /coded/learn-more.png 2x"
                   src="/coded/learn-more.png"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -514,7 +515,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <a className="Service_button__o8Hle" href="/maintenance">
+              <Link className="Service_button__o8Hle" href="/maintenance">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -527,7 +528,7 @@ export function Services() {
                   srcSet="/coded/learn-more.png, /coded/learn-more.png 2x"
                   src="/coded/learn-more.png"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -591,7 +592,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <a className="Service_button__o8Hle" href="#startup">
+              <Link className="Service_button__o8Hle" href="#startup">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -604,7 +605,7 @@ export function Services() {
                   srcSet="/coded/learn-more.png, /coded/learn-more.png 2x"
                   src="/coded/learn-more.png"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -666,7 +667,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <a className="Service_button__o8Hle" href="/software-development">
+              <Link className="Service_button__o8Hle" href="/software-development">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -679,7 +680,7 @@ export function Services() {
                   srcSet="/coded/learn-more.png, /coded/learn-more.png 2x"
                   src="/coded/learn-more.png"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -741,7 +742,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <a className="Service_button__o8Hle" href="/blockchain">
+              <Link className="Service_button__o8Hle" href="/blockchain">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -754,7 +755,7 @@ export function Services() {
                   srcSet="/coded/learn-more.png, /coded/learn-more.png 2x"
                   src="/coded/learn-more.png"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -818,7 +819,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <a className="Service_button__o8Hle" href="/product-design">
+              <Link className="Service_button__o8Hle" href="/product-design">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -831,7 +832,7 @@ export function Services() {
                   srcSet="/coded/learn-more.png, /coded/learn-more.png 2x"
                   src="/coded/learn-more.png"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -895,7 +896,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <a className="Service_button__o8Hle" href="/ai-and-ml">
+              <Link className="Service_button__o8Hle" href="/ai-and-ml">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -908,7 +909,7 @@ export function Services() {
                   srcSet="/coded/learn-more.png, /coded/learn-more.png 2x"
                   src="/coded/learn-more.png"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -972,7 +973,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <a className="Service_button__o8Hle" href="/outsourcing">
+              <Link className="Service_button__o8Hle" href="/outsourcing">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -985,7 +986,7 @@ export function Services() {
                   srcSet="/coded/learn-more.png, /coded/learn-more.png 2x"
                   src="/coded/learn-more.png"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -1049,7 +1050,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <a className="Service_button__o8Hle" href="/maintenance">
+              <Link className="Service_button__o8Hle" href="/maintenance">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -1062,7 +1063,7 @@ export function Services() {
                   srcSet="/coded/learn-more.png, /coded/learn-more.png 2x"
                   src="/coded/learn-more.png"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -1128,7 +1129,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <a className="Service_button__o8Hle" href="#startup">
+              <Link className="Service_button__o8Hle" href="#startup">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -1141,7 +1142,7 @@ export function Services() {
                   srcSet="/coded/learn-more.png, /coded/learn-more.png 2x"
                   src="/coded/learn-more.png"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

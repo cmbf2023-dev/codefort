@@ -209,7 +209,7 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
                 },
               },
               size: {
-                value: 4,
+                value: 3,
                 animation: {
                   enable: false,
                   speed: 2,
