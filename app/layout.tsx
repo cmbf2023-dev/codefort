@@ -12,11 +12,31 @@ const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
 export const metadata: Metadata = {
   title: "Codefort | Innovative Software Solutions for Business Growth",
-  description:
-    "Harness the power of scalable software solutions to elevate your business's performance and profitability with Codefort.",
-  generator: "v0.app",
+  description: "Harness the power of scalable software solutions to elevate your business's performance and profitability with Codefort.",
+  generator: "codeforttech.com",
+  keywords: ['ethereum', 'smart contracts', 'solidity', 'web3', 'decentralized applications',"codeforttech", 'codefort', "code", "coding", 'custom software development', 'bespoke software', 'tailored software', 'custom application development', 'enterprise software development', 'web application development', 'mobile app development', 'desktop software development', 'cross-platform development', 'full-stack development', 'front-end development', 'back-end development', 'api development', 'microservices development', 'cloud-native development', 'serverless development', 'devops for custom software', 'agile custom development', 'scrum development', 'waterfall development', 'iterative development', 'prototype development', 'mvp development', 'minimum viable product', 'proof of concept', 'pilot project', 'software consulting', 'technical consultancy'],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://codeforttech.com", // Replace with your actual domain
+  },
+  openGraph: {
+    title: "Codefort | Innovative Software Solutions for Business Growth",
+    description: "Harness the power of scalable software solutions to elevate your business's performance and profitability with Codefort.",
+    url: "https://codeforttech.com", // Replace with your actual domain
+    siteName: "v0 App",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Codefort | Innovative Software Solutions for Business Growth",
+    description: "Harness the power of scalable software solutions to elevate your business's performance and profitability with Codefort.",
+  },
   icons: {
-    icon: [
+    icon:  [
       {
         url: "/coded/logo.png",
         media: "(prefers-color-scheme: light)",
@@ -29,9 +49,15 @@ export const metadata: Metadata = {
         url: "/logo.svg",
         type: "image/svg+xml",
       },
+      {
+        url: "/logo.ico",
+        sizes: "any",
+      },
     ],
-    apple: "/_next/logo.webp",
+     apple: "/_next/logo.webp",
+    shortcut: "/logo.ico",
   },
+  manifest: "/site.webmanifest", // For PWA support
 }
 
 export default function RootLayout({

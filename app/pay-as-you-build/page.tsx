@@ -14,6 +14,12 @@ import { Footer } from "@/components/footer2"
 import "./data.css"
 import "./index.css"
 
+export const metadata = {
+  title: 'Pay As You Build | CodeFort Tech', // Specific title
+  description: 'Start with N300k Developing your Software Products with Us',
+  keywords: ['software', 'coding', "web design", "App Design"],
+}
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
