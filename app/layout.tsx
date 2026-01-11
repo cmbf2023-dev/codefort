@@ -56,7 +56,7 @@ export const metadata: Metadata = {
       },
     ],
      apple: "https://codeforttech.com/coded/logo.webp",
-    shortcut: "/logo.ico",
+    shortcut: "/favicon.ico",
   },
   manifest: "https://codeforttech.com/site.webmanifest", // For PWA support
 }
