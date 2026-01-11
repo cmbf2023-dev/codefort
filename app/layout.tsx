@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/_next/logo.png",
+        url: "/coded/logo.png",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/_next/logo.png",
+        url: "/coded/logo.png",
         media: "(prefers-color-scheme: dark)",
       },
       {

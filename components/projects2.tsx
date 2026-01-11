@@ -14,24 +14,24 @@ export function Projects() {
     
     // Set background images
     if (accordions[1]) {
-      accordions[1].style.backgroundImage = "url(/coded/accordion/furniture.jpg)";
-      accordions[1].style.backgroundPosition = "center center";
-      accordions[1].style.backgroundRepeat = "no-repeat";
-      accordions[1].style.backgroundSize = "cover";
+      (accordions[1] as HTMLElement).style.backgroundImage = "url(/coded/accordion/furniture.jpg)";
+      (accordions[1] as HTMLElement).style.backgroundPosition = "center center";
+      (accordions[1] as HTMLElement).style.backgroundRepeat = "no-repeat";
+      (accordions[1] as HTMLElement).style.backgroundSize = "cover";
     }
 
     if (accordions[0]) {
-      accordions[0].style.backgroundImage = "url(/coded/accordion/fintech.jpeg)";
-      accordions[0].style.backgroundPosition = "center center";
-      accordions[0].style.backgroundRepeat = "no-repeat";
-      accordions[0].style.backgroundSize = "cover";
+      (accordions[0] as HTMLElement).style.backgroundImage = "url(/coded/accordion/fintech.jpeg)";
+      (accordions[0] as HTMLElement).style.backgroundPosition = "center center";
+      (accordions[0] as HTMLElement).style.backgroundRepeat = "no-repeat";
+      (accordions[0] as HTMLElement).style.backgroundSize = "cover";
     }
 
     if (accordions[2]) {
-      accordions[2].style.backgroundImage = "url(/coded/accordion/nft.png)";
-      accordions[2].style.backgroundPosition = "center center";
-      accordions[2].style.backgroundRepeat = "no-repeat";
-      accordions[2].style.backgroundSize = "cover";
+      (accordions[2] as HTMLElement).style.backgroundImage = "url(/coded/accordion/nft.png)";
+      (accordions[2] as HTMLElement).style.backgroundPosition = "center center";
+      (accordions[2] as HTMLElement).style.backgroundRepeat = "no-repeat";
+      (accordions[2] as HTMLElement).style.backgroundSize = "cover";
     }
 
     // Update accordion state based on activeIndex
@@ -91,9 +91,15 @@ export function Projects() {
         
         // Add inactive overlay class
         overlay?.classList.add('Projects_overlayInactive__E_x2P');
-        
+        let isMobileDevice = window.matchMedia("only screen and (max-width: 760px)").matches;
         // Collapsed styling
-        (panel as HTMLElement).style.flex = '1';
+
+        if( ! isMobileDevice)
+          (panel as HTMLElement).style.flex = '1';
+        else {
+          (panel as HTMLElement).style.flex = "";
+        }
+
         (content as HTMLElement).style.opacity = '0';
         (content as HTMLElement).style.transform = 'translateY(20px)';
         (overlay as HTMLElement).style.opacity = '0.3';
@@ -138,6 +144,7 @@ export function Projects() {
 
   // Handle navigation arrow clicks
   const handleArrowLeft = () => {
+    console.log("active index: ", activeIndex )
     if (activeIndex > 0) {
       setActiveIndex(activeIndex - 1);
     }
@@ -145,6 +152,7 @@ export function Projects() {
 
   const handleArrowRight = () => {
     const accordionPanels = document.querySelectorAll('.Projects_accordionPanel__k2ce_');
+     console.log("active index: ", activeIndex )
     if (activeIndex < accordionPanels.length - 1) {
       setActiveIndex(activeIndex + 1);
     }
@@ -196,13 +204,13 @@ export function Projects() {
     const arrowLeft = navigationIcons[0];
     const arrowRight = navigationIcons[1];
 
-    if (arrowLeft) {
+    /*if (arrowLeft) {
       arrowLeft.addEventListener('click', handleArrowLeft);
     }
 
     if (arrowRight) {
       arrowRight.addEventListener('click', handleArrowRight);
-    }
+    }*/
 
     return () => {
       // Cleanup event listeners
@@ -214,13 +222,13 @@ export function Projects() {
         });
       });
 
-      if (arrowLeft) {
+      /*if (arrowLeft) {
         arrowLeft.removeEventListener('click', handleArrowLeft);
       }
 
       if (arrowRight) {
         arrowRight.removeEventListener('click', handleArrowRight);
-      }
+      }*/
     };
   }, [activeIndex]);
 
