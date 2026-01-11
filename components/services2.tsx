@@ -91,7 +91,7 @@ export function Services() {
             <div 
               ref={setServiceRef(0)}
               className="Service_wrapper__mFGbY" 
-              style={{backgroundColor: "#f0f9ff"}}
+              style={{backgroundColor: "#F9F1FF"}}
             >
               <img
                 alt="service icon big"
@@ -164,7 +164,7 @@ export function Services() {
             <div 
               ref={setServiceRef(1)}
               className="Service_wrapper__mFGbY" 
-              style={{backgroundColor: "#f0f9ff"}}
+              style={{backgroundColor: "#FFFAF0"}}
             >
               <img
                 alt="service icon big"
@@ -237,7 +237,7 @@ export function Services() {
             <div 
               ref={setServiceRef(2)}
               className="Service_wrapper__mFGbY" 
-              style={{backgroundColor: "#f0f9ff"}}
+              style={{backgroundColor: "#FFF2F1"}}
             >
               <img
                 alt="service icon big"
@@ -312,7 +312,7 @@ export function Services() {
             <div 
               ref={setServiceRef(3)}
               className="Service_wrapper__mFGbY" 
-              style={{backgroundColor: "#f0f9ff"}}
+              style={{backgroundColor: "#F6F7F9"}}
             >
               <img
                 alt="service icon big"
@@ -387,7 +387,7 @@ export function Services() {
             <div 
               ref={setServiceRef(4)}
               className="Service_wrapper__mFGbY" 
-              style={{backgroundColor: "#f0f9ff"}}
+              style={{backgroundColor: "#F1F5FF"}}
             >
               <img
                 alt="service icon big"
@@ -462,7 +462,7 @@ export function Services() {
             <div 
               ref={setServiceRef(5)}
               className="Service_wrapper__mFGbY" 
-              style={{backgroundColor: "#f0f9ff"}}
+              style={{backgroundColor: "#F0FFF5"}}
             >
               <img
                 alt="service icon big"
@@ -537,7 +537,7 @@ export function Services() {
             <div 
               ref={setServiceRef(6)}
               className="Service_wrapper__mFGbY" 
-              style={{backgroundColor: "#f0f9ff"}}
+              style={{backgroundColor: "#F0F9FF"}}
             >
               <img
                 alt="service icon big"
@@ -616,7 +616,7 @@ export function Services() {
             <div 
               ref={setServiceRef(7)}
               className="Service_wrapper__mFGbY" 
-              style={{backgroundColor: "#f0f9ff"}}
+              style={{backgroundColor: "#F9F1FF"}}
             >
               <img
                 alt="service icon big"
@@ -691,7 +691,7 @@ export function Services() {
             <div 
               ref={setServiceRef(8)}
               className="Service_wrapper__mFGbY" 
-              style={{backgroundColor: "#f0f9ff"}}
+              style={{backgroundColor: "#FFFAF0"}}
             >
               <img
                 alt="service icon big"
@@ -766,7 +766,7 @@ export function Services() {
             <div 
               ref={setServiceRef(9)}
               className="Service_wrapper__mFGbY" 
-              style={{backgroundColor: "#f0f9ff"}}
+              style={{backgroundColor: "#FFF2F1"}}
             >
               <img
                 alt="service icon big"
@@ -843,7 +843,7 @@ export function Services() {
             <div 
               ref={setServiceRef(10)}
               className="Service_wrapper__mFGbY" 
-              style={{backgroundColor: "#f0f9ff"}}
+              style={{backgroundColor: "#F6F7F9"}}
             >
               <img
                 alt="service icon big"
@@ -920,7 +920,7 @@ export function Services() {
             <div 
               ref={setServiceRef(11)}
               className="Service_wrapper__mFGbY" 
-              style={{backgroundColor: "#f0f9ff"}}
+              style={{backgroundColor: "#F1F5FF"}}
             >
               <img
                 alt="service icon big"
@@ -997,7 +997,7 @@ export function Services() {
             <div 
               ref={setServiceRef(12)}
               className="Service_wrapper__mFGbY" 
-              style={{backgroundColor: "#f0f9ff"}}
+              style={{backgroundColor: "#F0FFF5"}}
             >
               <img
                 alt="service icon big"
@@ -1074,7 +1074,7 @@ export function Services() {
             <div 
               ref={setServiceRef(13)}
               className="Service_wrapper__mFGbY" 
-              style={{backgroundColor: "#f0f9ff"}}
+              style={{backgroundColor: "#F0F9FF"}}
             >
               <img
                 alt="service icon big"
