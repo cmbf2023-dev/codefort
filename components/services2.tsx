@@ -100,7 +100,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className="Service_bigIcon__XIsmX"
+                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-1-big.webp, /coded/service-1-big.webp 2x"
                 src="/coded/service-1-big.webp"
@@ -173,7 +173,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className="Service_bigIcon__XIsmX"
+                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-2-big.webp, /coded/service-2-big.webp 2x"
                 src="/coded/service-2-big.webp"
@@ -246,7 +246,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className="Service_bigIcon__XIsmX"
+                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-3-big.webp, /coded/service-3-big.webp 2x"
                 src="/coded/service-3-big.webp"
@@ -321,7 +321,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className="Service_bigIcon__XIsmX"
+                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-4-big.webp, /coded/service-4-big.webp 2x"
                 src="/coded/service-4-big.webp"
@@ -396,7 +396,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className="Service_bigIcon__XIsmX"
+                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-5-big.webp, /coded/service-5-big.webp 2x"
                 src="/coded/service-5-big.webp"
@@ -471,7 +471,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className="Service_bigIcon__XIsmX"
+                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-6-big.webp, /coded/service-6-big.webp 2x"
                 src="/coded/service-6-big.webp"
@@ -546,7 +546,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className="Service_bigIcon__XIsmX"
+                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-7-big.webp, /coded/service-7-big.webp 2x"
                 src="/coded/service-7-big.webp"
@@ -625,7 +625,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className="Service_bigIcon__XIsmX"
+                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-1-big.webp, /coded/service-1-big.webp 2x"
                 src="/coded/service-1-big.webp"
@@ -700,7 +700,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className="Service_bigIcon__XIsmX"
+                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-2-big.webp, /coded/service-2-big.webp 2x"
                 src="/coded/service-2-big.webp"
@@ -775,7 +775,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className="Service_bigIcon__XIsmX"
+                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-3-big.webp, /coded/service-3-big.webp 2x"
                 src="/coded/service-3-big.webp"
@@ -852,7 +852,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className="Service_bigIcon__XIsmX"
+                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-4-big.webp, /coded/service-4-big.webp 2x"
                 src="/coded/service-4-big.webp"
@@ -929,7 +929,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className="Service_bigIcon__XIsmX"
+                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-5-big.webp, /coded/service-5-big.webp 2x"
                 src="/coded/service-5-big.webp"
@@ -1006,7 +1006,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className="Service_bigIcon__XIsmX"
+                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-6-big.webp, /coded/service-6-big.webp 2x"
                 src="/coded/service-6-big.webp"
@@ -1083,7 +1083,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className="Service_bigIcon__XIsmX"
+                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-7-big.webp, /coded/service-7-big.webp 2x"
                 src="/coded/service-7-big.webp"
