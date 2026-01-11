@@ -52,88 +52,24 @@ export function Contact() {
     return () => observer.disconnect();
   }, []);
 
-  // Brevo API configuration
-  const BREVO_API_KEY = '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';
-  const BREVO_API_URL = 'https://api.brevo.com/v3/smtp/email';
-  
-  // Email configuration
-  const RECIPIENT_EMAIL = 'lizzy1230@gmail.com';
-  const SENDER_EMAIL = 'seanpacey493@gmail.com';
-  const SENDER_NAME = 'Contact Form';
-  const EMAIL_SUBJECT = 'New Contact Form Submission';
-
   // Validation helpers
   const validateEmail = (email: string) => {
     return /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email);
   };
 
-  // Format email content
-  const formatEmailContent = (data: typeof formData) => {
-    let content = `
-      <h2>New Contact Form Submission</h2>
-      <p><strong>Name:</strong> ${data.fullName}</p>
-      <p><strong>Email:</strong> ${data.email}</p>
-    `;
-    
-    if (data.companyName) {
-      content += `<p><strong>Company:</strong> ${data.companyName}</p>`;
-    }
-    
-    if (data.phoneNumber && data.phoneNumber !== '+1') {
-      content += `<p><strong>Phone:</strong> ${data.phoneNumber}</p>`;
-    }
-    
-    content += `
-      <h3>Message:</h3>
-      <p>${data.message.replace(/\n/g, '<br>')}</p>
-      <hr>
-      <p><small>Submitted on: ${new Date().toLocaleString()}</small></p>
-    `;
-    
-    return content;
-  };
-
-  // Send email via Brevo API
-  const sendEmailViaBrevo = async (data: typeof formData) => {
-    const emailData = {
-      sender: {
-        name: SENDER_NAME,
-        email: SENDER_EMAIL
-      },
-      to: [{
-        email: RECIPIENT_EMAIL,
-        name: 'Website Owner'
-      }],
-      subject: EMAIL_SUBJECT,
-      htmlContent: formatEmailContent(data),
-      textContent: `New contact form submission from ${data.fullName} (${data.email}).
-        ${data.companyName ? `Company: ${data.companyName}` : ''}
-        ${data.phoneNumber && data.phoneNumber !== '+1' ? `Phone: ${data.phoneNumber}` : ''}
-        
-        Message: ${data.message}
-        
-        Submitted on: ${new Date().toLocaleString()}`,
-      replyTo: {
-        email: data.email,
-        name: data.fullName
-      },
-      headers: {
-        'X-Mailer': 'Website Contact Form'
-      }
-    };
-
+  // Send email via API
+  const sendEmail = async (data: typeof formData) => {
     const response = await fetch('/api/send-email', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'api-key': BREVO_API_KEY
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify(emailData)
+      body: JSON.stringify(data)
     });
 
     if (!response.ok) {
       const error = await response.json();
-      throw new Error(error.message || 'Failed to send email');
+      throw new Error(error.error || 'Failed to send email');
     }
 
     return response.json();
@@ -170,7 +106,7 @@ export function Contact() {
     setIsLoading(true);
 
     try {
-      await sendEmailViaBrevo(formData);
+      await sendEmail(formData);
       
       // Show success message
       setMessage({ 
@@ -365,30 +301,7 @@ export function Contact() {
         </div>
       </div>
       
-      {/* Status Message */}
-      {message && (
-        <div 
-          className={`Contaxct_message__${message.type}`}
-          style={{
-            margin: '15px auto',
-            padding: '12px 20px',
-            borderRadius: '4px',
-            fontWeight: 500,
-            maxWidth: '600px',
-            backgroundColor: message.type === 'error' ? '#fee' : '#efe',
-            color: message.type === 'error' ? '#c33' : '#393',
-            border: `1px solid ${message.type === 'error' ? '#fcc' : '#cfc'}`,
-            display: 'flex',
-            alignItems: 'center',
-            gap: '10px',
-            animation: 'fadeInUp 0.5s ease-out',
-            zIndex: 100
-          }}
-        >
-          <span>{message.type === 'error' ? '⚠️' : '✅'}</span>
-          <span>{message.text}</span>
-        </div>
-      )}
+      
       
       <form id="contact" className="Contaxct_form__xdPig" onSubmit={handleSubmit} noValidate={true}>
         <div className="Contaxct_formHeaderWrapper__O1ImV">
@@ -530,6 +443,30 @@ export function Contact() {
               >Terms of Service</a>
            apply.</small>
         </div>
+        {/* Status Message */}
+      {message && (
+        <div 
+          className={`Contaxct_message__${message.type}`}
+          style={{
+            margin: '15px auto',
+            padding: '12px 20px',
+            borderRadius: '4px',
+            fontWeight: 500,
+            maxWidth: '600px',
+            backgroundColor: message.type === 'error' ? '#fee' : '#efe',
+            color: message.type === 'error' ? '#c33' : '#393',
+            border: `1px solid ${message.type === 'error' ? '#fcc' : '#cfc'}`,
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px',
+            animation: 'fadeInUp 0.5s ease-out',
+            zIndex: 100
+          }}
+        >
+          <span>{message.type === 'error' ? '⚠️' : '✅'}</span>
+          <span>{message.text}</span>
+        </div>
+      )}
       </form>
       
       {/* Add CSS animations */}
