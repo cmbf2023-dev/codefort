@@ -237,7 +237,7 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
               events: {
                 onHover: {
                   enable: true,
-                  mode: "grab",
+                  mode: "repulse",
                 },
                 onClick: {
                   enable: true,
@@ -250,6 +250,10 @@ export function Header({ page, image = "/coded/hero-image.webp" }: { page: strin
                   links: {
                     opacity: 0.3,
                   },
+                },
+                repulse: {
+                  distance: 35,
+                  duration: 0.4,
                 },
                 push: {
                   quantity: 4,

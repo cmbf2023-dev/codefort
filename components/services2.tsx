@@ -142,7 +142,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <Link className="Service_button__o8Hle" href="/software-development">
+              <Link className={`Service_button__o8Hle ${visibleServices[0] ? 'animate-slide-left' : 'opacity-0'}`} href="/software-development">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -173,7 +173,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`Service_bigIcon__XIsmX ${visibleServices[1] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-2-big.webp, /coded/service-2-big.webp 2x"
                 src="/coded/service-2-big.webp"
@@ -215,7 +215,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <Link className="Service_button__o8Hle" href="/blockchain">
+              <Link className={`Service_button__o8Hle ${visibleServices[1] ? 'animate-slide-left' : 'opacity-0'}`} href="/blockchain">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -246,7 +246,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`Service_bigIcon__XIsmX ${visibleServices[2] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-3-big.webp, /coded/service-3-big.webp 2x"
                 src="/coded/service-3-big.webp"
@@ -290,7 +290,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <Link className="Service_button__o8Hle" href="/product-design">
+              <Link className={`Service_button__o8Hle ${visibleServices[2] ? 'animate-slide-left' : 'opacity-0'}`} href="/product-design">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -321,7 +321,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`Service_bigIcon__XIsmX ${visibleServices[3] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-4-big.webp, /coded/service-4-big.webp 2x"
                 src="/coded/service-4-big.webp"
@@ -365,7 +365,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <Link className="Service_button__o8Hle" href="/ai-and-ml">
+              <Link className={`Service_button__o8Hle ${visibleServices[3] ? 'animate-slide-left' : 'opacity-0'}`} href="/ai-and-ml">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -396,7 +396,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`Service_bigIcon__XIsmX ${visibleServices[4] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-5-big.webp, /coded/service-5-big.webp 2x"
                 src="/coded/service-5-big.webp"
@@ -440,7 +440,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <Link className="Service_button__o8Hle" href="/outsourcing">
+              <Link className={`Service_button__o8Hle ${visibleServices[4] ? 'animate-slide-left' : 'opacity-0'}`} href="/outsourcing">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -471,7 +471,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`Service_bigIcon__XIsmX ${visibleServices[5] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-6-big.webp, /coded/service-6-big.webp 2x"
                 src="/coded/service-6-big.webp"
@@ -515,7 +515,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <Link className="Service_button__o8Hle" href="/maintenance">
+              <Link className={`Service_button__o8Hle ${visibleServices[5] ? 'animate-slide-left' : 'opacity-0'}`} href="/maintenance">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -546,7 +546,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`Service_bigIcon__XIsmX ${visibleServices[6] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-7-big.webp, /coded/service-7-big.webp 2x"
                 src="/coded/service-7-big.webp"
@@ -592,7 +592,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <Link className="Service_button__o8Hle" href="#startup">
+              <Link className={`Service_button__o8Hle ${visibleServices[6] ? 'animate-slide-left' : 'opacity-0'}`} href="#startup">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -625,7 +625,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`Service_bigIcon__XIsmX ${visibleServices[7] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-1-big.webp, /coded/service-1-big.webp 2x"
                 src="/coded/service-1-big.webp"
@@ -667,7 +667,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <Link className="Service_button__o8Hle" href="/software-development">
+              <Link className={`Service_button__o8Hle ${visibleServices[7] ? 'animate-slide-left' : 'opacity-0'}`} href="/software-development">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -700,7 +700,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`Service_bigIcon__XIsmX ${visibleServices[8] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-2-big.webp, /coded/service-2-big.webp 2x"
                 src="/coded/service-2-big.webp"
@@ -742,7 +742,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <Link className="Service_button__o8Hle" href="/blockchain">
+              <Link className={`Service_button__o8Hle ${visibleServices[8] ? 'animate-slide-left' : 'opacity-0'}`} href="/blockchain">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -775,7 +775,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`Service_bigIcon__XIsmX ${visibleServices[9] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-3-big.webp, /coded/service-3-big.webp 2x"
                 src="/coded/service-3-big.webp"
@@ -819,7 +819,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <Link className="Service_button__o8Hle" href="/product-design">
+              <Link className={`Service_button__o8Hle ${visibleServices[9] ? 'animate-slide-left' : 'opacity-0'}`} href="/product-design">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -852,7 +852,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`Service_bigIcon__XIsmX ${visibleServices[10] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-4-big.webp, /coded/service-4-big.webp 2x"
                 src="/coded/service-4-big.webp"
@@ -896,7 +896,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <Link className="Service_button__o8Hle" href="/ai-and-ml">
+              <Link className={`Service_button__o8Hle ${visibleServices[10] ? 'animate-slide-left' : 'opacity-0'}`} href="/ai-and-ml">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -929,7 +929,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`Service_bigIcon__XIsmX ${visibleServices[11] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-5-big.webp, /coded/service-5-big.webp 2x"
                 src="/coded/service-5-big.webp"
@@ -973,7 +973,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <Link className="Service_button__o8Hle" href="/outsourcing">
+              <Link className={`Service_button__o8Hle ${visibleServices[11] ? 'animate-slide-left' : 'opacity-0'}`} href="/outsourcing">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -1006,7 +1006,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`Service_bigIcon__XIsmX ${visibleServices[12] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-6-big.webp, /coded/service-6-big.webp 2x"
                 src="/coded/service-6-big.webp"
@@ -1050,7 +1050,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <Link className="Service_button__o8Hle" href="/maintenance">
+              <Link className={`Service_button__o8Hle ${visibleServices[12] ? 'animate-slide-left' : 'opacity-0'}`} href="/maintenance">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"
@@ -1083,7 +1083,7 @@ export function Services() {
                 height="145"
                 decoding="async"
                 data-nimg="1"
-                className={`Service_bigIcon__XIsmX ${visibleServices[0] ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`Service_bigIcon__XIsmX ${visibleServices[13] ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{color: "transparent"}}
                 srcSet="/coded/service-7-big.webp, /coded/service-7-big.webp 2x"
                 src="/coded/service-7-big.webp"
@@ -1129,7 +1129,7 @@ export function Services() {
                   </div>
                 </div>
               </div>
-              <Link className="Service_button__o8Hle" href="#startup">
+              <Link className={`Service_button__o8Hle ${visibleServices[13] ? 'animate-slide-left' : 'opacity-0'}`} href="#startup">
                 <p className="Service_buttonText__gCaNX">Learn more</p>
                 <img
                   alt="learn more icon"

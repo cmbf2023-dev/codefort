@@ -5,7 +5,7 @@ export function SessionVideo(){
     <div className="Video_videoContainer__DZ4r4">
       <iframe 
       className="Video_videoIframe__1U8Mm" 
-      src="https://drive.google.com/file/d/1TzyvGqwGv4GH8Q_ob37L3zemgOeE9Iq-/preview" 
+      src="https://drive.google.com/file/d/1fldarcAKueDZP1VbZdoS-j_bgyCuR_Ef/preview" 
       title="YouTube video player" 
       frameBorder="0" 
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
