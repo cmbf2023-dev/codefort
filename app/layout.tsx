@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import Script from "next/script" // added Script for external integrations
+import StructuredData from '@/components/data';
 import "./globals.css"
 import "./index.css"
 import "./data1.css"
@@ -38,26 +39,26 @@ export const metadata: Metadata = {
   icons: {
     icon:  [
       {
-        url: "/coded/logo.png",
+        url: "https://codeforttech.com/coded/logo.png",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/coded/logo.png",
+        url: "https://codeforttech.com/coded/logo.png",
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/logo.svg",
+        url: "https://codeforttech.com/logo.svg",
         type: "image/svg+xml",
       },
       {
-        url: "/logo.ico",
+        url: "https://codeforttech.com/logo.ico",
         sizes: "any",
       },
     ],
-     apple: "/_next/logo.webp",
+     apple: "https://codeforttech.com/coded/logo.webp",
     shortcut: "/logo.ico",
   },
-  manifest: "/site.webmanifest", // For PWA support
+  manifest: "https://codeforttech.com/site.webmanifest", // For PWA support
 }
 
 export default function RootLayout({
@@ -67,6 +68,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <StructuredData />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground`}
       >
