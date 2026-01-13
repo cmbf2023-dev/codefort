@@ -36,15 +36,20 @@
 
         .logo {
             margin-bottom: 24px;
+            display: flex;
+            justify-content: center;
         }
 
         .logo h1 {
-            font-size: 72px;
+            font-size: 55px;
             font-weight: bold;
             color: #60a5fa;
             letter-spacing: 4px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
         .subtitle-row {
@@ -52,7 +57,6 @@
             align-items: center;
             justify-content: center;
             gap: 12px;
-            margin-bottom: 16px;
         }
 
         .subtitle-row svg {
@@ -80,6 +84,7 @@
             margin-bottom: 48px;
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 24px;
         }
 
@@ -93,8 +98,9 @@
             text-decoration: none;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
-            border: none;
+            border: 5px ridge black;
             cursor: pointer;
+            width: 60vw;
         }
 
         .nav-button:hover {
@@ -123,7 +129,7 @@
         .social-icons {
             display: flex;
             justify-content: center;
-            gap: 24px;
+            gap: 50px;
             margin-bottom: 32px;
             flex-wrap: wrap;
         }
@@ -180,10 +186,11 @@
         }
 
         .website-url a {
-            font-size: 20px;
+            font-size: 30px;
             color: white;
             text-decoration: none;
             transition: color 0.3s ease;
+            font-weight: 600;
         }
 
         .website-url a:hover {
@@ -206,10 +213,19 @@
             .nav-button {
                 padding: 16px 24px;
                 gap: 16px;
+                width: 80vw;
+                text-align: center;
+            }
+            .nav-button:nth-child(5) span{
+                font-size: small;
             }
 
             .nav-button span {
                 font-size: 16px;
+            }
+            .social-icons {
+                gap:10px;
+                flex-wrap: nowrap;
             }
         }
     </style>
@@ -219,7 +235,7 @@
         <!-- Header -->
         <div class="header">
             <div class="logo">
-                <h1>ⒻCODEFORT</h1>
+                <h1><img src="8.svg" alt="logo" width="60" height="60">CODEFORT</h1>
             </div>
             
             <div class="subtitle-row">
@@ -237,47 +253,52 @@
         <!-- Navigation Buttons -->
         <div class="nav-buttons">
             <a href="https://www.codeforttech.com/" target="_blank" class="nav-button">
-                <svg viewBox="0 0 24 24">
+                <!--<svg viewBox="0 0 24 24">
                     <circle cx="12" cy="12" r="10"/>
                     <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                </svg>
+                </svg>-->
+                <img src="12.svg" alt="our-website" srcset="" width="40" height="40">
                 <span>OUR WEBSITE</span>
             </a>
 
             <a href="https://www.codeforttech.com/pay-as-you-build" target="_blank" class="nav-button">
-                <svg viewBox="0 0 24 24">
+                <!--<svg viewBox="0 0 24 24">
                     <circle cx="12" cy="12" r="10"/>
                     <path d="M12 6v12M9 9.5a2.5 2.5 0 0 1 3-2.45M15 14.5a2.5 2.5 0 0 1-3 2.45"/>
-                </svg>
+                </svg>-->
+                <img src="13.svg" alt="our-website" srcset="" width="40" height="40">
                 <span>OUR PRICING PLAN</span>
             </a>
 
             <a href="https://www.codeforttech.com/our-process" target="_blank" class="nav-button">
-                <svg viewBox="0 0 24 24">
+                <!--<svg viewBox="0 0 24 24">
                     <circle cx="12" cy="12" r="3"/>
                     <path d="M12 1v6m0 6v6M23 12h-6m-6 0H1"/>
                     <circle cx="12" cy="12" r="8"/>
-                </svg>
+                </svg>-->
+                <img src="11.svg" alt="our-website" srcset="" width="40" height="40">
                 <span>OUR PROCESS</span>
             </a>
 
             <a href="https://www.codeforttech.com/software-development" target="_blank" class="nav-button">
-                <svg viewBox="0 0 24 24">
+                <!--<svg viewBox="0 0 24 24">
                     <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
                     <path d="M9 2L7.8 5.4a1 1 0 0 1-.6.6L4 7l3.2 1.2a1 1 0 0 1 .6.6L9 12l1.2-3.2a1 1 0 0 1 .6-.6L14 7l-3.2-1.2a1 1 0 0 1-.6-.6L9 2z"/>
                     <path d="M2 12h4m14 0h4M6 20c2-2 4-2 6-2s4 0 6 2"/>
-                </svg>
+                </svg>-->
+                <img src="10.svg" alt="our-website" srcset="" width="40" height="40">
                 <span>OUR SERVICE</span>
             </a>
 
             <a href="https://cal.com/codeforttech/30min" target="_blank" class="nav-button">
-                <svg viewBox="0 0 24 24">
+                <!--<svg viewBox="0 0 24 24">
                     <rect x="3" y="8" width="18" height="13" rx="2"/>
                     <path d="M3 11h18M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke-linecap="round" stroke-linejoin="round"/>
                     <circle cx="9" cy="15" r="1" fill="black"/>
                     <circle cx="15" cy="15" r="1" fill="black"/>
                     <path d="M9 18h6" stroke-linecap="round"/>
-                </svg>
+                </svg>-->
+                <img src="14.svg" alt="our-website" srcset="" width="40" height="40">
                 <span>BOOK CONSULTATION</span>
             </a>
         </div>
@@ -292,23 +313,26 @@
             </a>
 
             <a href="https://www.tiktok.com/@codeforttech?_r=1&_t=ZP-930tZn7t1oc" target="_blank" class="social-icon tiktok" title="TikTok">
-                <svg viewBox="0 0 24 24">
+                <!--<svg viewBox="0 0 24 24">
                     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-                </svg>
+                </svg>-->
+                <img src="4.svg" alt="test" srcset="" height="60" width="60">
             </a>
 
-            <a href="https://www.instagram.com/codefort_tech?igsh=MTRidWtsdzlkOWlqdA%3D%3D&utm_source=qr" target="_blank" class="social-icon instagram" title="Instagram">
-                <svg viewBox="0 0 24 24">
+            <a href="https://www.instagram.com/codefort_tech?igsh=MTRidWtsdzlkOWlqdA%3D%3D&utm_source=qr" target="_blank" class="social-icon" title="Instagram">
+                <!--<svg viewBox="0 0 24 24">
                     <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="white"/>
                     <circle cx="12" cy="12" r="4" fill="none" stroke="white"/>
                     <circle cx="18" cy="6" r="1.5" fill="white"/>
-                </svg>
+                </svg>-->
+                <img src="6.svg" alt="test" srcset="" height="60" width="60">
             </a>
 
             <a href="https://www.youtube.com/@CodeFortTech" target="_blank" class="social-icon youtube" title="YouTube">
-                <svg viewBox="0 0 24 24">
+               <!-- <svg viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
-                </svg>
+                </svg> -->
+                <img src="3.svg" alt="test" srcset="" height="60" width="60">
             </a>
 
             <a href="https://x.com/codeforttech?s=21&t=j6ezXU0Ya2DeqCyNf14Zcg" target="_blank" class="social-icon x" title="X">
@@ -318,9 +342,10 @@
             </a>
 
             <a href="https://t.me/codeforttech" target="_blank" class="social-icon telegram" title="Telegram">
-                <svg viewBox="0 0 24 24">
+                <!--<svg viewBox="0 0 24 24">
                     <path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/>
-                </svg>
+                </svg>-->
+                <img src="1.svg" alt="test" srcset="" height="60" width="60">
             </a>
         </div>
 
